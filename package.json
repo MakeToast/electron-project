@@ -1,0 +1,19 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager . --out=dist --asar --overwite --all",
+    "build:darwin": "electron-packager . --out=dist --asar --overwite --platform=darwin --arch=x64",
+    "compress": "cd dist; for file in `ls`; do zip -r -y $file.zip $file; done"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.9",
+    "electron-packager": "^12.1.2"
+  }
+}
